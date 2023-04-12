@@ -12,9 +12,7 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -30,6 +28,8 @@ import coil.compose.rememberImagePainter
 import com.example.whats_app_clone_jetpackcompose.Data.Chat
 import com.example.whats_app_clone_jetpackcompose.Data.DummyData
 import com.example.whats_app_clone_jetpackcompose.Data.Message
+import com.example.whats_app_clone_jetpackcompose.ui.view.ChatViewModel
+import kotlinx.coroutines.flow.filter
 
 //class DetailsActivity : ComponentActivity() {
 //    override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,8 +53,9 @@ import com.example.whats_app_clone_jetpackcompose.Data.Message
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun DetailsView(chatID:Int, onHome:()-> Unit) {
-    val chat = DummyData.listChat.filter { it.id== chatID }[0]
+fun DetailsView(chatID:Int, onHome:()-> Unit,vm:ChatViewModel) {
+    val DummyData by vm.users.collectAsState()
+    val chat = DummyData.filter { it.id== chatID }[0]
     Scaffold(backgroundColor = Color(0xFFEDEDED)
     , topBar = {MessageTopBar(chat = chat,onHome)},
     bottomBar =  {MessageBox()},

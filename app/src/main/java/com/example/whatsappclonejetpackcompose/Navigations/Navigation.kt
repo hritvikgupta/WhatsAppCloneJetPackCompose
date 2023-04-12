@@ -39,7 +39,10 @@ fun Navigation() {
             }
         )) {entry->
             entry.arguments?.getInt("id")
-                ?.let { DetailsView(chatID = it, onHome = {navController.popBackStack()}) }
+                ?.let {
+                    val vm: ChatViewModel=hiltViewModel()
+                    DetailsView(chatID = it, onHome = {navController.popBackStack()}, vm)
+                }
         }
 
     }

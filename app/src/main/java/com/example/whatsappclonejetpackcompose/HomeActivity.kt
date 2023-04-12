@@ -17,6 +17,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -26,11 +27,8 @@ import com.example.whats_app_clone_jetpackcompose.Navigation
 import com.example.whats_app_clone_jetpackcompose.Navigations.Screen
 import com.example.whats_app_clone_jetpackcompose.composable.AppTabs
 import com.example.whats_app_clone_jetpackcompose.composable.AppTopBar
-import com.example.whats_app_clone_jetpackcompose.ui.view.ChatView
-import com.example.whats_app_clone_jetpackcompose.ui.view.ChatViewModel
-import com.example.whats_app_clone_jetpackcompose.ui.view.ContactView
+import com.example.whats_app_clone_jetpackcompose.ui.view.*
 //import com.example.whats_app_clone_jetpackcompose.ui.view.DetailStartActivity
-import com.example.whats_app_clone_jetpackcompose.ui.view.StatusView
 import com.example.whatsappclonejetpackcompose.ui.theme.WhatsAppCloneJetPackComposeTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -181,7 +179,10 @@ class HomeActivity : ComponentActivity() {
                 when(tabSelected){
                     HomeTab.CHATS ->ChatView(navController, vm)
                     HomeTab.STATUS -> StatusView()
-                    HomeTab.CONTACTS -> ContactView()
+                    HomeTab.CONTACTS -> {
+                        val vm:contactViewModel= hiltViewModel()
+                        ContactView(vm)
+                    }
                 }
             }
 
