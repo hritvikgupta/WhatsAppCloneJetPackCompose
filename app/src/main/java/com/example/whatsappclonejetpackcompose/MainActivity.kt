@@ -18,8 +18,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.whats_app_clone_jetpackcompose.Navigation
 import com.example.whats_app_clone_jetpackcompose.composable.Center
 import com.example.whatsappclonejetpackcompose.ui.theme.WhatsAppCloneJetPackComposeTheme
+import com.example.whatsappclonejetpackcompose.ui.view.loginActivity
+import com.example.whatsappclonejetpackcompose.ui.view.loginView
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -40,7 +43,7 @@ class MainActivity : ComponentActivity() {
                     SplashView()
                     compositionScope.launch {
                         delay(1000)
-                        startActivity(Intent(this@MainActivity, HomeActivity::class.java))
+                        startActivity(Intent(this@MainActivity, loginActivity::class.java))
                     }
                 }
             }

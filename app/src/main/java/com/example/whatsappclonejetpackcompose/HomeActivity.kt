@@ -35,7 +35,7 @@ import dagger.hilt.android.AndroidEntryPoint
 enum class HomeTab{
     CHATS, STATUS, CONTACTS
 }
-@AndroidEntryPoint
+
 class HomeActivity : ComponentActivity() {
 
 
@@ -57,7 +57,7 @@ class HomeActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
 
                 ) {
-                    Navigation()
+
 
                 }
             }
@@ -106,13 +106,20 @@ class HomeActivity : ComponentActivity() {
                         DropdownMenu(expanded = showMenu ,
                             onDismissRequest = { showMenu =false}) {
                             DropdownMenuItem(onClick = {}) {
-                                Text("WhatsAppWeb")
+                                Text("WhatsApp Web")
 
                             }
                             DropdownMenuItem(onClick = {}) {
                                 Text("Settings")
 
                             }
+                            DropdownMenuItem(onClick = {
+                                navController.navigate("login")
+                            }) {
+                                Text("Logout")
+
+                            }
+
 
                         }
                         IconButton(onClick = { }) {
@@ -128,7 +135,7 @@ class HomeActivity : ComponentActivity() {
             floatingActionButton = {
                 when(tabSelected) {
                     HomeTab.CHATS -> {
-                        FloatingActionButton(onClick = { /*TODO*/ }, backgroundColor = Color.Green) {
+                        FloatingActionButton(onClick = { /*TODO*/ }, backgroundColor = Color(0xFF075E54)) {
                             Icon(
                                 painter = painterResource(id = R.drawable.ic_message),
                                 contentDescription = null,
@@ -149,7 +156,7 @@ class HomeActivity : ComponentActivity() {
 
                             }
                             Spacer(modifier = Modifier.height(16.dp))
-                            FloatingActionButton(onClick = { /*TODO*/ }, backgroundColor = Color.Green) {
+                            FloatingActionButton(onClick = { /*TODO*/ }, backgroundColor = Color(0xFF075E54)) {
                                 Icon(painter = painterResource(id = R.drawable.ic_camera),
                                     contentDescription = null,
                                     tint = Color.White)
@@ -158,7 +165,7 @@ class HomeActivity : ComponentActivity() {
                         }
                     }
                     HomeTab.CONTACTS->{
-                        FloatingActionButton(onClick = { /*TODO*/ }, backgroundColor = Color.Green) {
+                        FloatingActionButton(onClick = { /*TODO*/ }, backgroundColor = Color(0xFF075E54)) {
                             Icon(
                                 painter = painterResource(id = R.drawable.ic_add_call),
                                 contentDescription = null,

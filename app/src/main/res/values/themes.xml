@@ -2,5 +2,6 @@
 <resources>
 
     <style name="Theme.WhatsAppCloneJetPackCompose" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/NavBar</item>    </style>
+        <item name="android:statusBarColor">@color/NavBar</item>
+    </style>
 </resources>
