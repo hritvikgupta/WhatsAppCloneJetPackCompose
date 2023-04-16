@@ -38,7 +38,7 @@ https://user-images.githubusercontent.com/60143996/232336386-7c019f22-f424-420b-
 ## Getting Started
 
 1. Clone this repository:
-2.git clone https://github.com/<your-username>/whatsapp-clone.git
+2.git clone https://github.com/hritvikgupta/WhatsAppCloneJetPackCompose.git
 3. Open the project in Android Studio:
    cd whatsapp-clone
    open -a "Android Studio"
