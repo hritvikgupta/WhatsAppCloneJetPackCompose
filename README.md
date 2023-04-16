@@ -23,11 +23,11 @@ This is an open-source WhatsApp clone app built with Kotlin, HILT, Firebase, Nav
 https://user-images.githubusercontent.com/60143996/232336386-7c019f22-f424-420b-b29c-613325aff557.mp4
 
 
-_Insert screenshots of y![Screenshot 2023-04-16 at 12 05 25 PM](https://user-images.githubusercontent.com/60143996/232336417-6f13a277-cbfa-4337-9ba9-8cee5b4953a0.png)
+![Screenshot 2023-04-16 at 12 05 25 PM](https://user-images.githubusercontent.com/60143996/232336417-6f13a277-cbfa-4337-9ba9-8cee5b4953a0.png)
 ![Screenshot 2023-04-16 at 12 04 59 PM](https://user-images.githubusercontent.com/60143996/232336418-6a9e50cb-622a-4976-a3d2-12de04b9055d.png)
 ![Screenshot 2023-04-16 at 12 04 40 PM](https://user-images.githubusercontent.com/60143996/232336420-b33c55b3-ef46-434f-bb58-ec082878124b.png)
 ![Screenshot 2023-04-16 at 12 04 04 PM](https://user-images.githubusercontent.com/60143996/232336421-ae2b0336-f9d0-4dec-8a99-645eef826d82.png)
-our app here._
+
 
 ## Requirements
 
